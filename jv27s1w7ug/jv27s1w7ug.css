@@ -1,0 +1,41 @@
+.intro {
+    border: 1px solid black;
+    border-collapse: collapse;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 75px;
+    width: 600px;
+    text-align: center;
+    padding: 1px;
+}
+
+.name {
+    text-align: center;
+    font-size: 50px;
+}
+
+.links {
+    margin-inline: 15px;
+    display: inline-block;
+}
+
+.smallImg {
+    width: 67%;
+    object-fit: none;
+}
+
+footer {
+    text-align: center;
+}
+
+.socials {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.columns {
+    margin-inline: 15px;
+    display: inline-block;
+}
