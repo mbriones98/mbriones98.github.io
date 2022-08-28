@@ -1,5 +1,5 @@
 .intro {
-    border: 1px solid black;
+    border: 2px solid black;
     border-collapse: collapse;
     display: block;
     margin-left: auto;
@@ -7,12 +7,12 @@
     margin-bottom: 75px;
     width: 600px;
     text-align: center;
-    padding: 1px;
 }
 
 .name {
     text-align: center;
     font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .links {
@@ -21,17 +21,24 @@
 }
 
 .smallImg {
-    width: 67%;
-    object-fit: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    height: 700px;
+    object-fit: cover;
+    padding: 5px;
 }
 
 footer {
+    margin-top: 40px;
     text-align: center;
 }
 
 .socials {
     margin-left: auto;
     margin-right: auto;
+    margin-top: 25px;
     width: 50%;
 }
 
