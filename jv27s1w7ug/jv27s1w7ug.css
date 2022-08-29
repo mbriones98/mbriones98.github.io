@@ -1,23 +1,46 @@
+body {
+    font-family: Georgia
+}
+
 .intro {
     border: 2px solid black;
     border-collapse: collapse;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 75px;
+    margin: 35px auto 75px auto;
     width: 600px;
     text-align: center;
+    padding: 5px;
 }
 
 .name {
     text-align: center;
     font-size: 50px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 5px;
 }
 
-.links {
-    margin-inline: 15px;
+.link {
+    margin-inline: 7px;
+    font-size: 12px;
+    font-style: italic;
     display: inline-block;
+    transition: color .3s ease-in-out
+}
+
+.link:link {
+    text-decoration: none;
+    color: gray;
+}
+
+.link:visited {
+    color: gray;
+}
+
+.link:hover {
+    color: black;
+}
+
+.link:active {
+    text-decoration: none;
 }
 
 .smallImg {
@@ -32,6 +55,8 @@
 
 footer {
     margin-top: 40px;
+    font-size: 11px;
+    font-style: italic;
     text-align: center;
 }
 
@@ -43,6 +68,6 @@ footer {
 }
 
 .columns {
-    margin-inline: 15px;
+    margin-inline: 10px;
     display: inline-block;
 }
