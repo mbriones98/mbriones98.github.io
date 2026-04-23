@@ -1,22 +1,5 @@
 <script lang="ts">
-  type ContactLink = {
-    label: string;
-    value: string;
-    href: string;
-  };
-
-  const links: ContactLink[] = [
-    {
-      label: 'Email',
-      value: 'tallmatt5198@gmail.com',
-      href: 'mailto:tallmatt5198@gmail.com',
-    },
-    {
-      label: 'GitHub',
-      value: 'github.com/MattBriones',
-      href: 'https://github.com/MattBriones',
-    },
-  ];
+  import { contactLinks } from '$lib/constants/Contact';
 </script>
 
 <section class="section section--contact">
@@ -26,9 +9,13 @@
   </p>
 
   <ul class="contact__list">
-    {#each links as link}
+    {#each Object.values(contactLinks) as link}
+      {@const Icon = link.icon}
       <li class="contact__item">
-        <span class="contact__label">{link.label}</span>
+        <span class="contact__label">
+          <Icon size={18} aria-hidden="true" />
+          {link.label}
+        </span>
         <a class="contact__value" href={link.href}>{link.value} ↗</a>
       </li>
     {/each}
@@ -74,9 +61,12 @@
   }
 
   .contact__label {
+    align-items: center;
     color: var(--muted);
+    display: inline-flex;
     font-size: 0.75rem;
     font-weight: 700;
+    gap: var(--space-sm);
     letter-spacing: 0.1em;
     text-transform: uppercase;
     flex-shrink: 0;

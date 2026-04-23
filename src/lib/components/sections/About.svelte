@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { contactLinks } from '$lib/constants/Contact';
+
   const skills = ['TypeScript', 'SvelteKit', 'React', 'Node.js', 'Python', 'CSS'];
 </script>
 
@@ -11,10 +13,19 @@
 
   <div class="about__body">
     <p>
-      I'm a software engineer who cares about clean code, good design, and building
-      products that actually work. I'm interested in the intersection of engineering
-      and user experience.
+      I'm currently a software engineer at AWS, who has built multiple applications
+      across the whole stack, from highly secure AI infrastructure and backend services,
+      to gorgeous web application UI used by thousands of users.
     </p>
+  </div>
+
+  <div class="about__contact-icons">
+    {#each Object.values(contactLinks) as link}
+      {@const Icon = link.icon}
+      <a class="about__contact-icon" href={link.href} aria-label={link.label}>
+        <Icon size={22} aria-hidden="true" />
+      </a>
+    {/each}
   </div>
 
   <div class="about__skills">
@@ -61,6 +72,23 @@
     margin-bottom: var(--space-xl);
     font-size: 1.125rem;
     color: #c8c4be;
+  }
+
+  .about__contact-icons {
+    display: flex;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+  }
+
+  .about__contact-icon {
+    color: var(--muted);
+    display: inline-flex;
+    transition: color var(--transition-fast);
+  }
+
+  .about__contact-icon:hover {
+    color: var(--accent);
+    transition-duration: 200ms;
   }
 
   .about__skills-heading {
