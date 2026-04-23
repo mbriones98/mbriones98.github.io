@@ -16,7 +16,7 @@
           <Icon size={18} aria-hidden="true" />
           {link.label}
         </span>
-        <a class="contact__value" href={link.href}>{link.value} ↗</a>
+        <a class="contact__value" href={link.href} target="_blank">{link.value} ↗</a>
       </li>
     {/each}
   </ul>

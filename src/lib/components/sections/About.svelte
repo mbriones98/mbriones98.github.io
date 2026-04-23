@@ -22,7 +22,7 @@
   <div class="about__contact-icons">
     {#each Object.values(contactLinks) as link}
       {@const Icon = link.icon}
-      <a class="about__contact-icon" href={link.href} aria-label={link.label}>
+      <a class="about__contact-icon" href={link.href} aria-label={link.label} target="_blank">
         <Icon size={22} aria-hidden="true" />
       </a>
     {/each}
