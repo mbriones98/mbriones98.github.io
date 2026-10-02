@@ -29,7 +29,7 @@ Single-page SvelteKit app using **Svelte 5 runes mode** (enforced project-wide v
 
 **Icons:** Uses `@lucide/svelte` for generic icons (`Mail`, etc.). **Brand icons (`Github`, `Linkedin`) are NOT in `@lucide/svelte` v1+** — they were removed for trademark reasons. Custom Svelte components for brand marks live in `src/lib/assets/` (e.g. `Github.svelte`, `Linkedin.svelte`), built from official brand SVGs and using `currentColor` so they inherit text color for hover states. Don't try to import brand icons from `@lucide/svelte`.
 
-**Adapter:** Currently uses `svelte-adapter-bun`. To deploy to Vercel/Netlify/Cloudflare, swap it for the matching adapter in `svelte.config.js` and `package.json`.
+**Adapter:** `@sveltejs/adapter-static` in SPA mode (`ssr = false`, `fallback: 404.html`), deployed to GitHub Pages at the root domain via `.github/workflows/deploy.yml`.
 
 ## Workflow notes
 
