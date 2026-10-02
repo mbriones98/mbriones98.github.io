@@ -1,7 +1,21 @@
 <script lang="ts">
   import { contactLinks } from '$lib/constants/Contact';
 
-  const skills = ['TypeScript', 'SvelteKit', 'React', 'Node.js', 'Python', 'CSS'];
+  const skills = [
+    'TypeScript',
+    'SvelteKit',
+    'React',
+    'Node.js',
+    'Python',
+    'CSS',
+    'Kiro',
+    'Agentic AI',
+    'iOS',
+    'SwiftUI',
+    'Kotlin',
+    'AWS CDK',
+    'CloudWatch Metrics'
+  ];
 </script>
 
 <section class="section section--about">
